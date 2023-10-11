@@ -14,6 +14,7 @@
 		FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */; };
 		FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */; };
 		FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F82AD6DA550051F205 /* ActionCVC.swift */; };
+		FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409FC2AD6F9B50051F205 /* ImageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FAA409EB2AD5B3350051F205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		FAA409F82AD6DA550051F205 /* ActionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVC.swift; sourceTree = "<group>"; };
+		FAA409FC2AD6F9B50051F205 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +90,27 @@
 		FAA409F52AD6D4D40051F205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAA409FB2AD6F98F0051F205 /* ImageView */,
+				FAA409FA2AD6F95B0051F205 /* ActionsCollection */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAA409FA2AD6F95B0051F205 /* ActionsCollection */ = {
+			isa = PBXGroup;
+			children = (
 				FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */,
 				FAA409F82AD6DA550051F205 /* ActionCVC.swift */,
 			);
-			path = Controllers;
+			path = ActionsCollection;
+			sourceTree = "<group>";
+		};
+		FAA409FB2AD6F98F0051F205 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409FC2AD6F9B50051F205 /* ImageVC.swift */,
+			);
+			path = ImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +186,7 @@
 			files = (
 				FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */,
 				FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */,
+				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
 			);
