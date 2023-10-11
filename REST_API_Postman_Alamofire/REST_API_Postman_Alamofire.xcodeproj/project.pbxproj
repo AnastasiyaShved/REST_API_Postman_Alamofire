@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DD2AD5B3300051F205 /* AppDelegate.swift */; };
 		FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */; };
-		FAA409E22AD5B3300051F205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409E12AD5B3300051F205 /* ViewController.swift */; };
 		FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E32AD5B3300051F205 /* Main.storyboard */; };
 		FAA409E72AD5B3350051F205 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E62AD5B3350051F205 /* Assets.xcassets */; };
 		FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */; };
+		FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */; };
+		FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F82AD6DA550051F205 /* ActionCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REST_API_Postman_Alamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA409DD2AD5B3300051F205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAA409E12AD5B3300051F205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAA409E42AD5B3300051F205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAA409E62AD5B3350051F205 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA409E92AD5B3350051F205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA409EB2AD5B3350051F205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		FAA409F82AD6DA550051F205 /* ActionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +58,11 @@
 		FAA409DC2AD5B3300051F205 /* REST_API_Postman_Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				FAA409F32AD6D4C00051F205 /* App */,
 				FAA409F52AD6D4D40051F205 /* Controllers */,
 				FAA409F42AD6D4CB0051F205 /* views */,
 				FAA409E62AD5B3350051F205 /* Assets.xcassets */,
 				FAA409EB2AD5B3350051F205 /* Info.plist */,
+				FAA409F32AD6D4C00051F205 /* App */,
 			);
 			path = REST_API_Postman_Alamofire;
 			sourceTree = "<group>";
@@ -86,7 +88,8 @@
 		FAA409F52AD6D4D40051F205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAA409E12AD5B3300051F205 /* ViewController.swift */,
+				FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */,
+				FAA409F82AD6DA550051F205 /* ActionCVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,7 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA409E22AD5B3300051F205 /* ViewController.swift in Sources */,
+				FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */,
+				FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */,
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
 			);
