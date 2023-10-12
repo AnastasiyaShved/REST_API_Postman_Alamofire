@@ -111,12 +111,12 @@
             </objects>
             <point key="canvasLocation" x="1412" y="338"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail UserVC-->
         <scene sceneID="1ZG-8T-rhv">
             <objects>
-                <viewController id="Ts7-S0-kwO" sceneMemberID="viewController">
+                <viewController id="Ts7-S0-kwO" customClass="DetailUserVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yah-ji-Okl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-7l-L3B">
@@ -244,16 +244,25 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Posts"/>
+                                                        <connections>
+                                                            <action selector="photosBtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="DzH-5i-bnJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e8-Ct-PNc">
                                                         <rect key="frame" x="0.0" y="51" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Albums"/>
+                                                        <connections>
+                                                            <action selector="albumsBtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="8db-vd-wR7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-4s-trq">
                                                         <rect key="frame" x="0.0" y="102" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="ToDo-s"/>
+                                                        <connections>
+                                                            <action selector="todosBtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="FQA-8T-sT1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -283,7 +292,13 @@
                             <constraint firstItem="xBP-7l-L3B" firstAttribute="centerX" secondItem="yah-ji-Okl" secondAttribute="centerX" id="uz5-2W-M9P"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="fgs-sv-5ta" id="DgU-yr-O3Y"/>
+                        <outlet property="nameLbl" destination="Qu1-Bd-Qfu" id="FKb-3g-j7u"/>
+                        <outlet property="phoneLbl" destination="oNC-vG-bE9" id="oMh-Ff-ltl"/>
+                        <outlet property="userNameLbl" destination="SgJ-l2-a8h" id="5Wv-b8-jme"/>
+                        <outlet property="websiteLbl" destination="sx6-hw-IIM" id="uc6-WN-TYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtc-qy-wXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

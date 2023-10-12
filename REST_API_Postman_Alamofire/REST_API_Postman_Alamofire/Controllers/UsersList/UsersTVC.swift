@@ -29,6 +29,14 @@ class UsersTVC: UITableViewController {
         cell.detailTextLabel?.text = user.username
     
         return cell
+        // ДОПИСАТЬ!!!!
+//        override  tableView(_ tebleView: UITableView, didSelectRowAt: IndexPath) {
+//            let user = users[indexPath]
+//            let storybiard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storybiard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
+//            vc
+//        }
+        
     }
     
     //MARK: - private func

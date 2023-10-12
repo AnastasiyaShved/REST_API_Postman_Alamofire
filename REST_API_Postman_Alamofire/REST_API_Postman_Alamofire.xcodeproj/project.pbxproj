@@ -20,6 +20,15 @@
 		FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A042AD7BDDE0051F205 /* AddresModel.swift */; };
 		FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */; };
 		FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A092AD7C4250051F205 /* ApiConstans.swift */; };
+		FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A0B2AD857340051F205 /* DetailUserVC.swift */; };
+		FAA40A0E2AD85A4F0051F205 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */; };
+		FAA40A102AD85A780051F205 /* AlbumsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */; };
+		FAA40A122AD85E490051F205 /* PostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A112AD85E490051F205 /* PostsTVC.swift */; };
+		FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A142AD85E870051F205 /* AlbumsTVC.swift */; };
+		FAA40A182AD85FBA0051F205 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A172AD85FBA0051F205 /* PostsModel.swift */; };
+		FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A192AD8608B0051F205 /* AlbumsModel.swift */; };
+		FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */; };
+		FAA40A1E2AD86D2B0051F205 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +47,15 @@
 		FAA40A042AD7BDDE0051F205 /* AddresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresModel.swift; sourceTree = "<group>"; };
 		FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		FAA40A092AD7C4250051F205 /* ApiConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
+		FAA40A0B2AD857340051F205 /* DetailUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserVC.swift; sourceTree = "<group>"; };
+		FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
+		FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotos.storyboard; sourceTree = "<group>"; };
+		FAA40A112AD85E490051F205 /* PostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTVC.swift; sourceTree = "<group>"; };
+		FAA40A142AD85E870051F205 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
+		FAA40A172AD85FBA0051F205 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		FAA40A192AD8608B0051F205 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
+		FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA409E32AD5B3300051F205 /* Main.storyboard */,
+				FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */,
+				FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */,
 				FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */,
 			);
 			path = views;
@@ -103,7 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				FAA409FE2AD7B94D0051F205 /* UsersList */,
+				FAA40A132AD85E4D0051F205 /* Posts */,
 				FAA409FB2AD6F98F0051F205 /* ImageView */,
+				FAA40A162AD85E8C0051F205 /* Albums */,
 				FAA409FA2AD6F95B0051F205 /* ActionsCollection */,
 			);
 			path = Controllers;
@@ -130,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA409FF2AD7B9750051F205 /* UsersTVC.swift */,
+				FAA40A0B2AD857340051F205 /* DetailUserVC.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -141,6 +164,8 @@
 				FAA40A042AD7BDDE0051F205 /* AddresModel.swift */,
 				FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */,
 				FAA40A092AD7C4250051F205 /* ApiConstans.swift */,
+				FAA40A172AD85FBA0051F205 /* PostsModel.swift */,
+				FAA40A192AD8608B0051F205 /* AlbumsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,8 +173,26 @@
 		FAA40A082AD7C3F10051F205 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FAA40A132AD85E4D0051F205 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A112AD85E490051F205 /* PostsTVC.swift */,
+				FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		FAA40A162AD85E8C0051F205 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A142AD85E870051F205 /* AlbumsTVC.swift */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA40A0E2AD85A4F0051F205 /* PostFlow.storyboard in Resources */,
 				FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */,
 				FAA409E72AD5B3350051F205 /* Assets.xcassets in Resources */,
 				FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */,
+				FAA40A102AD85A780051F205 /* AlbumsAndPhotos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,12 +271,19 @@
 				FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */,
 				FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */,
 				FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */,
+				FAA40A122AD85E490051F205 /* PostsTVC.swift in Sources */,
 				FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */,
+				FAA40A1E2AD86D2B0051F205 /* NewPostVC.swift in Sources */,
+				FAA40A182AD85FBA0051F205 /* PostsModel.swift in Sources */,
 				FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */,
 				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
+				FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */,
 				FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */,
+				FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */,
+				FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */,
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
+				FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */,
 				FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
