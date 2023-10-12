@@ -43,11 +43,6 @@ class CollectionViewController: UICollectionViewController {
         case .users: performSegue(withIdentifier: "openUsersList", sender: nil) 
         }
     }
-
-    
-    
-    
-
 }
 // c помощью расширения хадаем раземер ячейке
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -55,5 +50,4 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
        //делаем ширину ячейки = ширине экрана - 50р
         CGSize(width: UIScreen.main.bounds.width - 50 , height: 80)
     }
-    
 }
