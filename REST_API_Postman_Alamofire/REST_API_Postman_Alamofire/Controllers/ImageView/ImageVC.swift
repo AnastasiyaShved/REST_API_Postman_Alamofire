@@ -12,7 +12,7 @@ class ImageVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
    
-    private let imageURL = "http://wallpapers-image.ru/2560x1600/nature/wallpapers/wallpapers-nature-9.jpg"
+    private let imageURL = "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg"
     
     
     override func viewDidLoad() {
@@ -27,12 +27,34 @@ class ImageVC: UIViewController {
         //cоздаем URL request
         guard let url = URL(string: imageURL) else { return }
         let urlReqest = URLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: urlReqest) { data, response, error in
+    /// создаем  URLSession (ессли не требуется останавливать запрос можно  не  создавать новое свойство)
+        ///обязательно добааить метод resume() для запуска запроса
+        URLSession.shared.dataTask(with: urlReqest) { [weak self] data, response, error in
             print(data)
             print(response)
             print(error)
-        }
         
+            ///DispatchQueue - объект, позволяющий работать с многопоточкой
+            DispatchQueue.main.async {
+                self?.activityIndicatorView.stopAnimating()
+           
+               if let error = error {
+                   print (error.localizedDescription)
+                   return
+               }
+               
+               if let response = response {
+                   print(response)
+               }
+               
+               if let data = data,
+               let image  = UIImage(data: data) {
+                   self?.imageView.image = image
+               } else {
+               
+               }
+           }
+        }
+        .resume()
     }
 }
