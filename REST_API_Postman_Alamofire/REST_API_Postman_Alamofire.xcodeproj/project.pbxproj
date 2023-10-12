@@ -29,6 +29,9 @@
 		FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A192AD8608B0051F205 /* AlbumsModel.swift */; };
 		FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */; };
 		FAA40A1E2AD86D2B0051F205 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */; };
+		FAA40A212AD874F10051F205 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A202AD874F10051F205 /* SwiftyJSON */; };
+		FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A232AD875BE0051F205 /* Alamofire */; };
+		FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A262AD876FB0051F205 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA40A212AD874F10051F205 /* SwiftyJSON in Frameworks */,
+				FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */,
+				FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +217,11 @@
 			dependencies = (
 			);
 			name = REST_API_Postman_Alamofire;
+			packageProductDependencies = (
+				FAA40A202AD874F10051F205 /* SwiftyJSON */,
+				FAA40A232AD875BE0051F205 /* Alamofire */,
+				FAA40A262AD876FB0051F205 /* AlamofireImage */,
+			);
 			productName = REST_API_Postman_Alamofire;
 			productReference = FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +233,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
@@ -239,6 +253,11 @@
 				Base,
 			);
 			mainGroup = FAA409D12AD5B3300051F205;
+			packageReferences = (
+				FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = FAA409DB2AD5B3300051F205 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -502,6 +521,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAA40A202AD874F10051F205 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		FAA40A232AD875BE0051F205 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FAA40A262AD876FB0051F205 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAA409D22AD5B3300051F205 /* Project object */;
 }
