@@ -15,6 +15,11 @@
 		FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */; };
 		FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F82AD6DA550051F205 /* ActionCVC.swift */; };
 		FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409FC2AD6F9B50051F205 /* ImageVC.swift */; };
+		FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409FF2AD7B9750051F205 /* UsersTVC.swift */; };
+		FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A022AD7B9E00051F205 /* UsersModel.swift */; };
+		FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A042AD7BDDE0051F205 /* AddresModel.swift */; };
+		FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */; };
+		FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A092AD7C4250051F205 /* ApiConstans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		FAA409F82AD6DA550051F205 /* ActionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVC.swift; sourceTree = "<group>"; };
 		FAA409FC2AD6F9B50051F205 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		FAA409FF2AD7B9750051F205 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		FAA40A022AD7B9E00051F205 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		FAA40A042AD7BDDE0051F205 /* AddresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresModel.swift; sourceTree = "<group>"; };
+		FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		FAA40A092AD7C4250051F205 /* ApiConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 		FAA409DC2AD5B3300051F205 /* REST_API_Postman_Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				FAA40A082AD7C3F10051F205 /* Services */,
+				FAA40A012AD7B9B60051F205 /* Models */,
 				FAA409F52AD6D4D40051F205 /* Controllers */,
 				FAA409F42AD6D4CB0051F205 /* views */,
 				FAA409E62AD5B3350051F205 /* Assets.xcassets */,
@@ -90,6 +102,7 @@
 		FAA409F52AD6D4D40051F205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAA409FE2AD7B94D0051F205 /* UsersList */,
 				FAA409FB2AD6F98F0051F205 /* ImageView */,
 				FAA409FA2AD6F95B0051F205 /* ActionsCollection */,
 			);
@@ -111,6 +124,32 @@
 				FAA409FC2AD6F9B50051F205 /* ImageVC.swift */,
 			);
 			path = ImageView;
+			sourceTree = "<group>";
+		};
+		FAA409FE2AD7B94D0051F205 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409FF2AD7B9750051F205 /* UsersTVC.swift */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		FAA40A012AD7B9B60051F205 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A022AD7B9E00051F205 /* UsersModel.swift */,
+				FAA40A042AD7BDDE0051F205 /* AddresModel.swift */,
+				FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */,
+				FAA40A092AD7C4250051F205 /* ApiConstans.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAA40A082AD7C3F10051F205 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */,
 				FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */,
 				FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */,
+				FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */,
+				FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */,
 				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
+				FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */,
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
+				FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,7 +40,7 @@ class CollectionViewController: UICollectionViewController {
         let userAction = userActions[indexPath.row]
         switch userAction {
         case .downloadImage: performSegue(withIdentifier: "goToImageView", sender: nil)
-        case .users: print("users")
+        case .users: performSegue(withIdentifier: "openUsersList", sender: nil) 
         }
     }
 
