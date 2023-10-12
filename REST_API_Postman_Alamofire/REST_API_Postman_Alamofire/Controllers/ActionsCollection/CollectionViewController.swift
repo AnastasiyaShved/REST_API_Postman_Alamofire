@@ -7,27 +7,22 @@
 
 import UIKit
 
+//MARK: - enum
 enum UserActions: String, CaseIterable {
     case downloadImage = "Download image"
     case users = "Open users list"
-//CaseIterable - создает массив из enum, чтобы его выягуть в свойство дополнить методом .allCases
+///CaseIterable - создает массив из enum, чтобы его выягуть в свойство дополнить методом .allCases
 }
 
 class CollectionViewController: UICollectionViewController {
 
+    //MARK: - properties
     private let reuseIdentifier = "Cell"
     private let userActions = UserActions.allCases
     
- 
-
-    
-
-    // MARK: UICollectionViewDataSource
-
- 
-
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    
         return userActions.count
     }
 
@@ -35,18 +30,17 @@ class CollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActionCVC
         let userAction = userActions[indexPath.row].rawValue
         cell.infoLbl.text = userAction
+        
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-    
-/// отлавливание на нажатие ячейки
+    // MARK: - UICollectionViewDelegate
+    /// отлавливание нажатие ячейки
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = userActions[indexPath.row]
         switch userAction {
         case .downloadImage: performSegue(withIdentifier: "goToImageView", sender: nil)
-            
-        case .users: print("hh")
+        case .users: print("users")
         }
     }
 
