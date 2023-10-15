@@ -18,7 +18,6 @@ class UsersTVC: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return users.count
     }
 
@@ -29,30 +28,25 @@ class UsersTVC: UITableViewController {
         cell.detailTextLabel?.text = user.username
     
         return cell
-        // ДОПИСАТЬ!!!!
-//        override  tableView(_ tebleView: UITableView, didSelectRowAt: IndexPath) {
-//            let user = users[indexPath]
-//            let storybiard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storybiard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
-//            vc
-//        }
-        
     }
+    
+       override func tableView(_ tebleView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let user = users[indexPath.row]
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
+            vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+        }
     
     //MARK: - private func
     private func fetchUsers() {
         guard let usersURL = ApiConstans.usersURL else { return }
-        
         URLSession.shared.dataTask(with: usersURL) { [weak self] data, response, error in
-            
             guard let response = response else { return }
-
             print(response)
-         
             if let error = error {
                 print(error)
             }
-            
             if let data = data {
                 do {
                     self?.users = try JSONDecoder().decode([User].self, from: data)
@@ -67,7 +61,6 @@ class UsersTVC: UITableViewController {
             }
         }.resume()
     }
-
 }
 //decode -  в каком формате нужны данные
  

@@ -9,6 +9,8 @@ import UIKit
 
 class AlbumsTVC: UITableViewController {
 
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

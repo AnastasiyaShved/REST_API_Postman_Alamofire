@@ -114,13 +114,13 @@
         <!--Detail UserVC-->
         <scene sceneID="1ZG-8T-rhv">
             <objects>
-                <viewController id="Ts7-S0-kwO" customClass="DetailUserVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailUserVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ts7-S0-kwO" customClass="DetailUserVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yah-ji-Okl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-7l-L3B">
-                                <rect key="frame" x="0.0" y="44" width="414" height="545.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="642"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ig-yg-rlL">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
@@ -130,10 +130,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-sa-Y4B">
-                                        <rect key="frame" x="30" y="30" width="354" height="435.5"/>
+                                        <rect key="frame" x="30" y="30" width="354" height="532"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9H9-Vi-aef">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="202.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="248"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-37-kNM">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
@@ -235,21 +235,49 @@
                                                             <constraint firstItem="GyV-mw-iZ5" firstAttribute="width" secondItem="YvU-PV-4WM" secondAttribute="width" multiplier="1.19277" id="OZd-Vh-Pyj"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-cS-pvE">
+                                                        <rect key="frame" x="0.0" y="227.5" width="354" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hO-S5-M1F">
+                                                                <rect key="frame" x="0.0" y="0.0" width="176" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oJ-rw-Ul5">
+                                                                <rect key="frame" x="206" y="0.0" width="148" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="1hO-S5-M1F" firstAttribute="width" secondItem="0oJ-rw-Ul5" secondAttribute="width" multiplier="1.19277" id="QNn-oL-v2R"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mTx-VL-1To">
-                                                <rect key="frame" x="0.0" y="302.5" width="354" height="133"/>
+                                                <rect key="frame" x="0.0" y="348" width="354" height="184"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzZ-is-nMt">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Open map"/>
+                                                        <connections>
+                                                            <action selector="openMapbtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="t3f-Qv-0Hc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-ln-2EJ">
+                                                        <rect key="frame" x="0.0" y="51" width="354" height="31"/>
+                                                        <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Posts"/>
                                                         <connections>
-                                                            <action selector="photosBtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="DzH-5i-bnJ"/>
+                                                            <action selector="postsBtn:" destination="Ts7-S0-kwO" eventType="touchUpInside" id="tVG-le-XRP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e8-Ct-PNc">
-                                                        <rect key="frame" x="0.0" y="51" width="354" height="31"/>
+                                                        <rect key="frame" x="0.0" y="102" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Albums"/>
                                                         <connections>
@@ -257,7 +285,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-4s-trq">
-                                                        <rect key="frame" x="0.0" y="102" width="354" height="31"/>
+                                                        <rect key="frame" x="0.0" y="153" width="354" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="ToDo-s"/>
                                                         <connections>
@@ -293,11 +321,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="companyLbl" destination="0oJ-rw-Ul5" id="akG-5f-7Nk"/>
                         <outlet property="emailLbl" destination="fgs-sv-5ta" id="DgU-yr-O3Y"/>
                         <outlet property="nameLbl" destination="Qu1-Bd-Qfu" id="FKb-3g-j7u"/>
                         <outlet property="phoneLbl" destination="oNC-vG-bE9" id="oMh-Ff-ltl"/>
                         <outlet property="userNameLbl" destination="SgJ-l2-a8h" id="5Wv-b8-jme"/>
-                        <outlet property="websiteLbl" destination="sx6-hw-IIM" id="uc6-WN-TYc"/>
+                        <outlet property="websiteLbl" destination="YvU-PV-4WM" id="koU-hL-TEf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtc-qy-wXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
