@@ -30,7 +30,7 @@ class UsersTVC: UITableViewController {
         return cell
     }
     
-       override func tableView(_ tebleView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tebleView: UITableView, didSelectRowAt indexPath: IndexPath) {
            let user = users[indexPath.row]
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
@@ -64,5 +64,3 @@ class UsersTVC: UITableViewController {
 }
 //decode -  в каком формате нужны данные
  
-// MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { }

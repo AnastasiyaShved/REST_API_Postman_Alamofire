@@ -49,7 +49,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Posts" id="dcy-DE-gCQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OUV-mz-KTx"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OUV-mz-KTx">
+                            <connections>
+                                <action selector="addNewPost:" destination="oCl-q5-WX5" id="vgs-r7-hoc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -63,7 +67,7 @@
         <!--New PostVC-->
         <scene sceneID="wzY-rr-2Vr">
             <objects>
-                <viewController id="X91-rr-OSJ" customClass="NewPostVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X91-rr-OSJ" customClass="NewPostVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPH-Nz-6Vg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +137,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SAF-0C-ZSQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="su0-aQ-Cuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ads-Kt-xVL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PFe-mD-Waa">
@@ -144,9 +149,8 @@
                         <segue destination="oCl-q5-WX5" kind="relationship" relationship="rootViewController" id="oni-Ev-RF7"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="su0-aQ-Cuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330.43478260869568" y="62.946428571428569"/>
+            <point key="canvasLocation" x="-330" y="15"/>
         </scene>
     </scenes>
     <resources>

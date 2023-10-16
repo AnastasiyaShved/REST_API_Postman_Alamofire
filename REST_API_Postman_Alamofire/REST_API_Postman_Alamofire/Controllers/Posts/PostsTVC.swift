@@ -11,10 +11,13 @@ class PostsTVC: UITableViewController {
 
     var user: User?
     var posts: [Post] = []
-//!!!!!! сжедать через протокол и делегат
-     
+
     override func viewWillAppear(_ animated: Bool) {
         fetchPosts()
+    }
+    
+    @IBAction func addNewPost(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "createNewPost", sender: nil)
     }
     
     // MARK: - Table view data source
@@ -43,6 +46,8 @@ class PostsTVC: UITableViewController {
             }
         }    
     }
+    
+   
    
     // MARK: - private func
     private func fetchPosts() {
