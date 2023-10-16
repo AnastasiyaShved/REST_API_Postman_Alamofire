@@ -13,9 +13,12 @@ class UsersTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchUsers()
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
@@ -37,6 +40,20 @@ class UsersTVC: UITableViewController {
             vc.user = user
         navigationController?.pushViewController(vc, animated: true)
         }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let userId = users[indexPath.row].id
+            NetworkService.deletePost(postId: userId) { [weak self] in
+                self?.users.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
+    
+    @IBAction func addNewUser(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "createNewUser", sender: nil)
+    }
     
     //MARK: - private func
     private func fetchUsers() {

@@ -17,6 +17,3 @@ struct User: Codable {
     let address: Address?
     let company: Company?
 }
-
-
-

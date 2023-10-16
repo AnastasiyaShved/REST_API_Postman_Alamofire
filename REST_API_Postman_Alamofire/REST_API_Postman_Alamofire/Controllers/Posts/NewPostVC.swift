@@ -66,7 +66,6 @@ class NewPostVC: UIViewController {
                 "title": title,
                 "body": body
             ]
-            
             AF.request(url, method: .post, parameters: parametrs, encoding: JSONEncoding.default)
               // что хотим получть в ответе
                 .response { [weak self] response in

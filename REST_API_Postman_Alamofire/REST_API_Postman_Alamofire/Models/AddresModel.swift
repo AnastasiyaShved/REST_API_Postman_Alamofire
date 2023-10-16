@@ -12,10 +12,10 @@ struct Address: Codable {
     let suite: String?
     let city: String?
     let zipcode: String?
-    let geo: Goe?
+    let geo: Geo?
 }
 
-struct Goe: Codable {
+struct Geo: Codable {
     let lat: String?
     let lng: String?
 }

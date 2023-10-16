@@ -32,6 +32,7 @@
 		FAA40A212AD874F10051F205 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A202AD874F10051F205 /* SwiftyJSON */; };
 		FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A232AD875BE0051F205 /* Alamofire */; };
 		FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A262AD876FB0051F205 /* AlamofireImage */; };
+		FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		FAA40A192AD8608B0051F205 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
 		FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
+		FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				FAA409FF2AD7B9750051F205 /* UsersTVC.swift */,
 				FAA40A0B2AD857340051F205 /* DetailUserVC.swift */,
+				FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */,
 				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
 				FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */,
+				FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */,
 				FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */,
 				FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */,
 				FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */,
