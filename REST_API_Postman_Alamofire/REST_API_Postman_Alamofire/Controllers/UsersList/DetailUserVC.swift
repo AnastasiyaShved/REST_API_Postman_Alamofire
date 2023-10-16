@@ -16,7 +16,7 @@ class DetailUserVC: UIViewController {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
-    @IBOutlet weak var companyLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
    
     var user: User?
     
@@ -25,6 +25,8 @@ class DetailUserVC: UIViewController {
         setData(user: user)
     
     }
+    // MARK: - actions
+    @IBAction func openMapbtn(_ sender: Any) { openMapForUserLocation() }
     
     @IBAction func postsBtn(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
@@ -32,31 +34,23 @@ class DetailUserVC: UIViewController {
         vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
-    //    @IBAction func postsBtn(_ sender: UIButton) {
-//
-//    }
     
     @IBAction func albumsBtn(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "AlbumsAndPhotos", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AlbumsTVC") as! AlbumsTVC
         vc.user = user
         navigationController?.pushViewController(vc, animated: true)
-        
     }
     
-    @IBAction func openMapbtn(_ sender: Any) { openMapForUserLocation() }
     @IBAction func todosBtn(_ sender: UIButton) { }
     
-    
     // MARK: - private func
-    
     private func openMapForUserLocation() {
         if let user = user,
-           let latitudeString = user.adress?.geo?.lat,
-           let langitudeString = user.adress?.geo?.lng,
+           let latitudeString = user.address?.geo?.lat,
+           let langitudeString = user.address?.geo?.lng,
            let latitude = Double(latitudeString),
            let langitude = Double(langitudeString) {
-            
             let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: langitude)
             let placeMark = MKPlacemark(coordinate: coordinate)
             let mapItem = MKMapItem(placemark: placeMark)
@@ -72,9 +66,14 @@ class DetailUserVC: UIViewController {
             emailLbl.text = user.email
             phoneLbl.text = user.phone
             websiteLbl.text = user.website
-
-
+            if let city = user.address?.city,
+               let street = user.address?.street,
+               let suite = user.address?.suite,
+               let zipcode = user.address?.zipcode {
+                addressLbl.text = "\(city)\n\(street)\n\(suite) \(zipcode)"
+            } else {
+                addressLbl.text = "No address"
+            }
         }
     }
-
 }

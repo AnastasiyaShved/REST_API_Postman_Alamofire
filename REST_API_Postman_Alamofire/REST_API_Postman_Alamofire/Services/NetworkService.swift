@@ -14,21 +14,14 @@ class NetworkService {
    
     static func deletePost(postId: Int,
                            callback: @escaping() -> ()) {
-        //@escaping  - избегающее забыкание, уходит в другой поток
-       
-        
         let urlPath = "\(ApiConstans.postsPath)/\(postId)"
-        
-        AF.request(urlPath,
-                   method: .delete,
-                   encoding: JSONEncoding.default)
+        AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
             .response { response in
                 callback()
-
-                
             }
-    
     }
 }
+//@escaping  - избегающее забыкание, уходит в другой поток
+
 /// сделать по максимому приложение
 /// создание удаление рекдактирование (put poast)

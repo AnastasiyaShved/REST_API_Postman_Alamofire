@@ -14,7 +14,7 @@ struct User: Codable {
     let email: String?
     let phone: String?
     let website: String?
-    let adress: Address?
+    let address: Address?
     let company: Company?
 }
 
