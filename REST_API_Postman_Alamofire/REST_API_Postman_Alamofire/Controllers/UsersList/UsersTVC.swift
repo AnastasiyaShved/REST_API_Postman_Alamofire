@@ -11,13 +11,9 @@ class UsersTVC: UITableViewController {
 
     var users: [User] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: - life cycle
     
-    override func viewWillAppear(_ animated: Bool) {
-        fetchUsers()
-    }
+    override func viewWillAppear(_ animated: Bool) { fetchUsers() }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,7 +25,6 @@ class UsersTVC: UITableViewController {
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.username
-    
         return cell
     }
     
@@ -38,7 +33,7 @@ class UsersTVC: UITableViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
             vc.user = user
-        navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -60,7 +55,6 @@ class UsersTVC: UITableViewController {
         guard let usersURL = ApiConstans.usersURL else { return }
         URLSession.shared.dataTask(with: usersURL) { [weak self] data, response, error in
             guard let response = response else { return }
-            print(response)
             if let error = error {
                 print(error)
             }
@@ -68,7 +62,7 @@ class UsersTVC: UITableViewController {
                 do {
                     self?.users = try JSONDecoder().decode([User].self, from: data)
                     print(self?.users)
-                } catch  {
+                } catch {
                     print(error)
                 }
             }

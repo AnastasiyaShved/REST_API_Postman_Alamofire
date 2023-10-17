@@ -27,7 +27,7 @@ class NewPostVC: UIViewController {
             // header
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            //baby
+            //boby
             let postBadyJSON: [String: Any] = [
                 "userId": userId,
                 "title": title,
@@ -37,7 +37,6 @@ class NewPostVC: UIViewController {
             let httpBady = try? JSONSerialization.data(withJSONObject: postBadyJSON)
             //обращаемся к реквесту и вкидывыем новое свойство
             request.httpBody = httpBady
-            
             // created dataTask and seмnd Post
             URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
                 print(response)

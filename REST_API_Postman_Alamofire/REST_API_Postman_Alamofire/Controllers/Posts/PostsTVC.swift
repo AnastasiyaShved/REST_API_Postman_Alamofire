@@ -12,9 +12,7 @@ class PostsTVC: UITableViewController {
     var user: User?
     var posts: [Post] = []
 
-    override func viewWillAppear(_ animated: Bool) {
-        fetchPosts()
-    }
+    override func viewWillAppear(_ animated: Bool) { fetchPosts() }
     
     @IBAction func addNewPost(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "createNewPost", sender: nil)
@@ -46,9 +44,6 @@ class PostsTVC: UITableViewController {
             }
         }    
     }
-    
-   
-   
     // MARK: - private func
     private func fetchPosts() {
         let userId = user?.id.description ?? ""
@@ -59,7 +54,6 @@ class PostsTVC: UITableViewController {
             guard let data = data else { return }
             do {
                 self?.posts = try JSONDecoder().decode([Post].self, from: data)
-                
             } catch let error {
                 print(error)
             }
@@ -76,5 +70,4 @@ class PostsTVC: UITableViewController {
             vc.user = user
         }
     }
-    
 }

@@ -30,6 +30,7 @@ class NewUserVC: UIViewController {
     
     var user: User?
     
+    // MARK: - action
     @IBAction func saveBtn(_ sender: UIButton) {
         
         guard let idString = userIdTF.text,
@@ -89,10 +90,10 @@ class NewUserVC: UIViewController {
                 //получаем результат нашего запроса на добавление нового пользователя в БД и обрабатываем ответ
                 switch response.result {
                 case .success:
-                    //при успешном ответе - возвращаемся к списку юзеров (закрываем экран добавления юзера)
+                    //при успешном ответе
                     self?.navigationController?.popViewController(animated: true)
                 case .failure(let error):
-                    //при ошибке - принтим ошибку в кансоль
+                    //при ошибке
                     print(error)
                 }
             }
@@ -103,24 +104,23 @@ class NewUserVC: UIViewController {
     }
 }
 
-/// для упрощения конвертации Encodable object-ов в json
-/// что бы не создавать отдельные json для каждой модели,
-/// напишем расширение для всех объектов которые реализуют протокол Encodable (наши модельки подписаны под Codable. Codable = Encodable + Codable)
-/// теперь у каждой модели появится возможность конвертироваться в json вызовом метода toJSON()
-
 extension Encodable {
 
     func toJSON() throws -> [String: Any]? {
         do {
-            ///пробуем сконвертировать нашу  Encodable модель в data, данный метод может выбрасывать ошибку, в случаем ошибки мы попадем в блок catch
+            ///пробуем сконвертировать нашу  Encodable модель в data, может быть ошибка
             let data = try JSONEncoder().encode(self)
-            ///пробуем создать JSON из полученной data,  данный метод может выбрасывать ошибку, в случаем ошибки мы попадем в блок catch
+            ///пробуем создать JSON из полученной data,  может быть ошибка
             let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
             
             return json
+            /// если есть ошибки поподаем в catch и передаем полученную ошибку вверх по цепочке
         } catch let error as NSError {
-            //передаем полученную ошибку вверх по цепочке
             throw error
         }
     }
 }
+/// для упрощения конвертации Encodable object-ов в json
+/// что бы не создавать отдельные json для каждой модели,
+/// делаем расширение для всех объектов которые реализуют протокол Encodable (наши модельки подписаны под Codable. Codable = Encodable + Codable)
+/// каждую модель можем конвертировать в json вызовом метода toJSON()
