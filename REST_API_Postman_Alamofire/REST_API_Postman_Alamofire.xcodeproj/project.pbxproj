@@ -33,6 +33,8 @@
 		FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A232AD875BE0051F205 /* Alamofire */; };
 		FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A262AD876FB0051F205 /* AlamofireImage */; };
 		FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */; };
+		FAB1B0ED2ADEF5AC008F73B5 /* CommentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */; };
+		FAB1B0EF2ADEF61A008F73B5 /* CommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 		FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
+		FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTVC.swift; sourceTree = "<group>"; };
+		FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 				FAA40A092AD7C4250051F205 /* ApiConstans.swift */,
 				FAA40A172AD85FBA0051F205 /* PostsModel.swift */,
 				FAA40A192AD8608B0051F205 /* AlbumsModel.swift */,
+				FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 		FAA40A132AD85E4D0051F205 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				FAB1B0EB2ADEF56D008F73B5 /* Comments */,
 				FAA40A112AD85E490051F205 /* PostsTVC.swift */,
 				FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */,
 			);
@@ -202,6 +208,14 @@
 				FAA40A142AD85E870051F205 /* AlbumsTVC.swift */,
 			);
 			path = Albums;
+			sourceTree = "<group>";
+		};
+		FAB1B0EB2ADEF56D008F73B5 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +313,8 @@
 				FAA40A182AD85FBA0051F205 /* PostsModel.swift in Sources */,
 				FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */,
 				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
+				FAB1B0EF2ADEF61A008F73B5 /* CommentsModel.swift in Sources */,
+				FAB1B0ED2ADEF5AC008F73B5 /* CommentsTVC.swift in Sources */,
 				FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */,
 				FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */,
 				FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */,
