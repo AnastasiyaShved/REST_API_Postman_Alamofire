@@ -9,21 +9,62 @@
 /* Begin PBXBuildFile section */
 		FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DD2AD5B3300051F205 /* AppDelegate.swift */; };
 		FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */; };
-		FAA409E22AD5B3300051F205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409E12AD5B3300051F205 /* ViewController.swift */; };
 		FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E32AD5B3300051F205 /* Main.storyboard */; };
 		FAA409E72AD5B3350051F205 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E62AD5B3350051F205 /* Assets.xcassets */; };
 		FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */; };
+		FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */; };
+		FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409F82AD6DA550051F205 /* ActionCVC.swift */; };
+		FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409FC2AD6F9B50051F205 /* ImageVC.swift */; };
+		FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409FF2AD7B9750051F205 /* UsersTVC.swift */; };
+		FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A022AD7B9E00051F205 /* UsersModel.swift */; };
+		FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A042AD7BDDE0051F205 /* AddresModel.swift */; };
+		FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */; };
+		FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A092AD7C4250051F205 /* ApiConstans.swift */; };
+		FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A0B2AD857340051F205 /* DetailUserVC.swift */; };
+		FAA40A0E2AD85A4F0051F205 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */; };
+		FAA40A102AD85A780051F205 /* AlbumsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */; };
+		FAA40A122AD85E490051F205 /* PostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A112AD85E490051F205 /* PostsTVC.swift */; };
+		FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A142AD85E870051F205 /* AlbumsTVC.swift */; };
+		FAA40A182AD85FBA0051F205 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A172AD85FBA0051F205 /* PostsModel.swift */; };
+		FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A192AD8608B0051F205 /* AlbumsModel.swift */; };
+		FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */; };
+		FAA40A1E2AD86D2B0051F205 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */; };
+		FAA40A212AD874F10051F205 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A202AD874F10051F205 /* SwiftyJSON */; };
+		FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A232AD875BE0051F205 /* Alamofire */; };
+		FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAA40A262AD876FB0051F205 /* AlamofireImage */; };
+		FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */; };
+		FAB1B0ED2ADEF5AC008F73B5 /* CommentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */; };
+		FAB1B0EF2ADEF61A008F73B5 /* CommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REST_API_Postman_Alamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA409DD2AD5B3300051F205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAA409E12AD5B3300051F205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAA409E42AD5B3300051F205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAA409E62AD5B3350051F205 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA409E92AD5B3350051F205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA409EB2AD5B3350051F205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		FAA409F82AD6DA550051F205 /* ActionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVC.swift; sourceTree = "<group>"; };
+		FAA409FC2AD6F9B50051F205 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		FAA409FF2AD7B9750051F205 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		FAA40A022AD7B9E00051F205 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		FAA40A042AD7BDDE0051F205 /* AddresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresModel.swift; sourceTree = "<group>"; };
+		FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		FAA40A092AD7C4250051F205 /* ApiConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
+		FAA40A0B2AD857340051F205 /* DetailUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserVC.swift; sourceTree = "<group>"; };
+		FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
+		FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotos.storyboard; sourceTree = "<group>"; };
+		FAA40A112AD85E490051F205 /* PostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTVC.swift; sourceTree = "<group>"; };
+		FAA40A142AD85E870051F205 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
+		FAA40A172AD85FBA0051F205 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		FAA40A192AD8608B0051F205 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
+		FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
+		FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
+		FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTVC.swift; sourceTree = "<group>"; };
+		FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA40A212AD874F10051F205 /* SwiftyJSON in Frameworks */,
+				FAA40A242AD875BE0051F205 /* Alamofire in Frameworks */,
+				FAA40A272AD876FB0051F205 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +100,122 @@
 		FAA409DC2AD5B3300051F205 /* REST_API_Postman_Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				FAA409DD2AD5B3300051F205 /* AppDelegate.swift */,
-				FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */,
-				FAA409E12AD5B3300051F205 /* ViewController.swift */,
-				FAA409E32AD5B3300051F205 /* Main.storyboard */,
+				FAA40A082AD7C3F10051F205 /* Services */,
+				FAA40A012AD7B9B60051F205 /* Models */,
+				FAA409F52AD6D4D40051F205 /* Controllers */,
+				FAA409F42AD6D4CB0051F205 /* views */,
 				FAA409E62AD5B3350051F205 /* Assets.xcassets */,
-				FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */,
 				FAA409EB2AD5B3350051F205 /* Info.plist */,
+				FAA409F32AD6D4C00051F205 /* App */,
 			);
 			path = REST_API_Postman_Alamofire;
+			sourceTree = "<group>";
+		};
+		FAA409F32AD6D4C00051F205 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409DD2AD5B3300051F205 /* AppDelegate.swift */,
+				FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FAA409F42AD6D4CB0051F205 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409E32AD5B3300051F205 /* Main.storyboard */,
+				FAA40A0F2AD85A780051F205 /* AlbumsAndPhotos.storyboard */,
+				FAA40A0D2AD85A4F0051F205 /* PostFlow.storyboard */,
+				FAA409E82AD5B3350051F205 /* LaunchScreen.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FAA409F52AD6D4D40051F205 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409FE2AD7B94D0051F205 /* UsersList */,
+				FAA40A132AD85E4D0051F205 /* Posts */,
+				FAA409FB2AD6F98F0051F205 /* ImageView */,
+				FAA40A162AD85E8C0051F205 /* Albums */,
+				FAA409FA2AD6F95B0051F205 /* ActionsCollection */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAA409FA2AD6F95B0051F205 /* ActionsCollection */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409F62AD6D86C0051F205 /* CollectionViewController.swift */,
+				FAA409F82AD6DA550051F205 /* ActionCVC.swift */,
+			);
+			path = ActionsCollection;
+			sourceTree = "<group>";
+		};
+		FAA409FB2AD6F98F0051F205 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409FC2AD6F9B50051F205 /* ImageVC.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		FAA409FE2AD7B94D0051F205 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				FAA409FF2AD7B9750051F205 /* UsersTVC.swift */,
+				FAA40A0B2AD857340051F205 /* DetailUserVC.swift */,
+				FAB1B0E92ADDD5CB008F73B5 /* NewUserVC.swift */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		FAA40A012AD7B9B60051F205 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A022AD7B9E00051F205 /* UsersModel.swift */,
+				FAA40A042AD7BDDE0051F205 /* AddresModel.swift */,
+				FAA40A062AD7BDFF0051F205 /* CompanyModel.swift */,
+				FAA40A092AD7C4250051F205 /* ApiConstans.swift */,
+				FAA40A172AD85FBA0051F205 /* PostsModel.swift */,
+				FAA40A192AD8608B0051F205 /* AlbumsModel.swift */,
+				FAB1B0EE2ADEF61A008F73B5 /* CommentsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAA40A082AD7C3F10051F205 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAA40A132AD85E4D0051F205 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1B0EB2ADEF56D008F73B5 /* Comments */,
+				FAA40A112AD85E490051F205 /* PostsTVC.swift */,
+				FAA40A1D2AD86D2B0051F205 /* NewPostVC.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		FAA40A162AD85E8C0051F205 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				FAA40A142AD85E870051F205 /* AlbumsTVC.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		FAB1B0EB2ADEF56D008F73B5 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1B0EC2ADEF5AC008F73B5 /* CommentsTVC.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +234,11 @@
 			dependencies = (
 			);
 			name = REST_API_Postman_Alamofire;
+			packageProductDependencies = (
+				FAA40A202AD874F10051F205 /* SwiftyJSON */,
+				FAA40A232AD875BE0051F205 /* Alamofire */,
+				FAA40A262AD876FB0051F205 /* AlamofireImage */,
+			);
 			productName = REST_API_Postman_Alamofire;
 			productReference = FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */;
 			productType = "com.apple.product-type.application";
@@ -94,6 +250,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
@@ -111,6 +270,11 @@
 				Base,
 			);
 			mainGroup = FAA409D12AD5B3300051F205;
+			packageReferences = (
+				FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = FAA409DB2AD5B3300051F205 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA40A0E2AD85A4F0051F205 /* PostFlow.storyboard in Resources */,
 				FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */,
 				FAA409E72AD5B3350051F205 /* Assets.xcassets in Resources */,
 				FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */,
+				FAA40A102AD85A780051F205 /* AlbumsAndPhotos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +304,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA409E22AD5B3300051F205 /* ViewController.swift in Sources */,
+				FAA40A052AD7BDDE0051F205 /* AddresModel.swift in Sources */,
+				FAA409F92AD6DA550051F205 /* ActionCVC.swift in Sources */,
+				FAA409F72AD6D86C0051F205 /* CollectionViewController.swift in Sources */,
+				FAA40A122AD85E490051F205 /* PostsTVC.swift in Sources */,
+				FAA40A0A2AD7C4250051F205 /* ApiConstans.swift in Sources */,
+				FAA40A1E2AD86D2B0051F205 /* NewPostVC.swift in Sources */,
+				FAA40A182AD85FBA0051F205 /* PostsModel.swift in Sources */,
+				FAA40A002AD7B9750051F205 /* UsersTVC.swift in Sources */,
+				FAA409FD2AD6F9B50051F205 /* ImageVC.swift in Sources */,
+				FAB1B0EF2ADEF61A008F73B5 /* CommentsModel.swift in Sources */,
+				FAB1B0ED2ADEF5AC008F73B5 /* CommentsTVC.swift in Sources */,
+				FAA40A152AD85E870051F205 /* AlbumsTVC.swift in Sources */,
+				FAB1B0EA2ADDD5CB008F73B5 /* NewUserVC.swift in Sources */,
+				FAA40A072AD7BDFF0051F205 /* CompanyModel.swift in Sources */,
+				FAA40A1C2AD86A7F0051F205 /* NetworkService.swift in Sources */,
+				FAA40A1A2AD8608B0051F205 /* AlbumsModel.swift in Sources */,
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
+				FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */,
+				FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +541,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAA40A202AD874F10051F205 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A1F2AD874F10051F205 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		FAA40A232AD875BE0051F205 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A222AD875BE0051F205 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FAA40A262AD876FB0051F205 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA40A252AD876FB0051F205 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAA409D22AD5B3300051F205 /* Project object */;
 }
