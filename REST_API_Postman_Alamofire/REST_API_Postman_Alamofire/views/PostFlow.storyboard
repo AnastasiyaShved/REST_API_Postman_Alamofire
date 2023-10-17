@@ -58,6 +58,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="X91-rr-OSJ" kind="show" identifier="createNewPost" id="VI9-ip-xGU"/>
+                        <segue destination="Fdl-eK-Pab" kind="show" identifier="goToComments" id="E5P-nX-F6O"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kf4-y9-L8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -132,12 +133,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phV-11-ynz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286.9565217391305" y="-72.321428571428569"/>
+            <point key="canvasLocation" x="1355" y="-74"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="xZr-rz-cD0">
+            <objects>
+                <tableViewController storyboardIdentifier="CommentsTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fdl-eK-Pab" customClass="CommentsTVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LPB-xJ-9KE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" textLabel="5a6-J9-OCs" detailTextLabel="BrJ-13-hed" style="IBUITableViewCellStyleSubtitle" id="aII-6e-zyB">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="69.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aII-6e-zyB" id="wC8-cY-SKp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5a6-J9-OCs">
+                                            <rect key="frame" x="20" y="8.5" width="38" height="24"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.1850400807" green="0.3805661286" blue="0.59900881070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrJ-13-hed">
+                                            <rect key="frame" x="20" y="36" width="62" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.19971734839999999" green="0.4107524045" blue="0.64652182840000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fdl-eK-Pab" id="wfz-Va-zX1"/>
+                            <outlet property="delegate" destination="Fdl-eK-Pab" id="Mad-3O-8bb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="u7B-lB-jy9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfz-Gc-kQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355" y="591"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SAF-0C-ZSQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="su0-aQ-Cuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ads-Kt-xVL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PFe-mD-Waa">
@@ -149,6 +194,7 @@
                         <segue destination="oCl-q5-WX5" kind="relationship" relationship="rootViewController" id="oni-Ev-RF7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="su0-aQ-Cuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330" y="15"/>
         </scene>

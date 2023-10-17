@@ -64,10 +64,17 @@ class PostsTVC: UITableViewController {
         task.resume()
     }
     
-    // MARK: - Navigation
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToComments", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? NewPostVC {
             vc.user = user
+        } else if let vc = segue.destination as? CommentsTVC,
+                  let indexPath = tableView.indexPathForSelectedRow {
+            let  postID = posts[indexPath.row].id
+            vc.postID = postID
         }
     }
 }
