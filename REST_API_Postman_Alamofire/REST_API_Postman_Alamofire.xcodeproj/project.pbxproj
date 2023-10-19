@@ -11,6 +11,8 @@
 		FA6BDCEB2AE154E7000AEED6 /* PhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BDCEA2AE154E7000AEED6 /* PhotosCVC.swift */; };
 		FA9C64EC2AE1654F00C1E72B /* PhotoCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C64EA2AE1654F00C1E72B /* PhotoCVCell.xib */; };
 		FA9C64ED2AE1654F00C1E72B /* PhotoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */; };
+		FA9D18ED2AE1990B009C1E92 /* CachManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D18EC2AE1990B009C1E92 /* CachManager.swift */; };
+		FA9D18F02AE19E90009C1E92 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D18EF2AE19E90009C1E92 /* PhotoVC.swift */; };
 		FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DD2AD5B3300051F205 /* AppDelegate.swift */; };
 		FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */; };
 		FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E32AD5B3300051F205 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		FA6BDCEA2AE154E7000AEED6 /* PhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCVC.swift; sourceTree = "<group>"; };
 		FA9C64EA2AE1654F00C1E72B /* PhotoCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVCell.xib; sourceTree = "<group>"; };
 		FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVCell.swift; sourceTree = "<group>"; };
+		FA9D18EC2AE1990B009C1E92 /* CachManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachManager.swift; sourceTree = "<group>"; };
+		FA9D18EF2AE19E90009C1E92 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REST_API_Postman_Alamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA409DD2AD5B3300051F205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 				FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		FA9D18EE2AE19E68009C1E92 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				FA9D18EF2AE19E90009C1E92 /* PhotoVC.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		FAA409D12AD5B3300051F205 = {
@@ -152,6 +164,7 @@
 		FAA409F52AD6D4D40051F205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA9D18EE2AE19E68009C1E92 /* Photo */,
 				FAA409FE2AD7B94D0051F205 /* UsersList */,
 				FAA40A132AD85E4D0051F205 /* Posts */,
 				FAA409FB2AD6F98F0051F205 /* ImageView */,
@@ -208,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA40A1B2AD86A7F0051F205 /* NetworkService.swift */,
+				FA9D18EC2AE1990B009C1E92 /* CachManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,6 +361,8 @@
 				FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */,
 				FA9C64ED2AE1654F00C1E72B /* PhotoCVCell.swift in Sources */,
 				FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */,
+				FA9D18ED2AE1990B009C1E92 /* CachManager.swift in Sources */,
+				FA9D18F02AE19E90009C1E92 /* PhotoVC.swift in Sources */,
 				FA6BDCEB2AE154E7000AEED6 /* PhotosCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

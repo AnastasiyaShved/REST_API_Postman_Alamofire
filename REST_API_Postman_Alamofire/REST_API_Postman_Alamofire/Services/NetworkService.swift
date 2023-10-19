@@ -104,15 +104,48 @@ class NetworkService {
                 callback(value, err)
             }
     }
+    
     static func getThumbnail(thumbnailUrl: String, callback: @escaping (_ result: UIImage?, _ error: AFError?) -> ()) {
-        AF.request(thumbnailUrl).responseImage { response in
-            switch response.result {
-            case .success(let image): callback(image, nil)
-            case .failure(let error): callback(nil, error)
+        //пробуем получить из кэша даннеы
+        if let image = CachManager.shared.imageCache.image(withIdentifier: thumbnailUrl) {
+            callback(image, nil)
+        } else {
+        //ecли не получилось оставть изкэга картинку
+        
+            AF.request(thumbnailUrl).responseImage { response in
+                switch response.result {
+                case .success(let image): callback(image, nil)
+                    //нужно добавить в кэщ картинку
+                    CachManager.shared.imageCache.add(image, withIdentifier: thumbnailUrl)
+                    callback(image, nil)
+                case .failure(let error):
+                    callback(nil, error)
+                }
             }
         }
     }
+    
+    //универсальные методы для загрузки любых типов данных
+    
+    static func getData(from url: URL, complition: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: complition).resume()
+    }
+    
+    static func downloadImage(from url: URL, callback: @escaping (_ _imale: UIImage?, _ _error: Error?) -> ()) {
+        getData(from: url) { data, response, error in
+            //тут можно добавть допю логику обработки ошибок, предобразование картинок и тд
+            if let data = data,
+               // можно писать просо if let data
+               let image = UIImage(data: data) {
+                callback(image, nil)
+            } else {
+                callback(nil, error)
+            }
+            
+        }
+    }
 }
+
 
 
 
