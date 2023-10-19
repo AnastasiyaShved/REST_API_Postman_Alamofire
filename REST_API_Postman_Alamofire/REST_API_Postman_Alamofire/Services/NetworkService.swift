@@ -79,7 +79,7 @@ class NetworkService {
     }
     static func fetchPhotos(albumId: Int,
                             callback: @escaping (_ result: [Photo]?, _ error: Error?) -> ()) {
-        let urlPath = "\(ApiConstans.postsPath)?albumId=\(albumId)"
+        let urlPath = "\(ApiConstans.photosPath)?albumId=\(albumId)"
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
                 
@@ -104,7 +104,7 @@ class NetworkService {
                 callback(value, err)
             }
     }
-    static func getThumbnail(thumbnailUrl: String, callback:@escaping (_ result: UIImage?, _ error: AFError?) -> ()) {
+    static func getThumbnail(thumbnailUrl: String, callback: @escaping (_ result: UIImage?, _ error: AFError?) -> ()) {
         AF.request(thumbnailUrl).responseImage { response in
             switch response.result {
             case .success(let image): callback(image, nil)

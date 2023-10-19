@@ -21,7 +21,7 @@ class PhotosCVC: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let layout = UICollectionViewFlowLayout()
-        let size = UIScreen.main.bounds.width / 2 - 5
+        let size = UIScreen.main.bounds.width/2 - 5
         layout.itemSize = CGSize(width: size, height: size)
         collectionView.collectionViewLayout = layout
     }

@@ -36,12 +36,17 @@ class AlbumsTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let albumId = albums?[indexPath.row].id
-            NetworkService.deletePost(postId: albumId ?? 0) { [weak self] in
+            guard let albumId = albums?[indexPath.row].id else { return }
+            NetworkService.deletePost(postId: albumId) { [weak self] in
                 self?.albums?.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }    
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let albom = albums?[indexPath.row]
+        performSegue(withIdentifier: "showPhotos", sender: albom)
     }
     
     // MARK: - private func
