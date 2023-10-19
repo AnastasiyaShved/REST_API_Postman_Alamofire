@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA6BDCE82AE11CAD000AEED6 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BDCE72AE11CAD000AEED6 /* PhotosModel.swift */; };
 		FA6BDCEB2AE154E7000AEED6 /* PhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BDCEA2AE154E7000AEED6 /* PhotosCVC.swift */; };
+		FA9C64EC2AE1654F00C1E72B /* PhotoCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C64EA2AE1654F00C1E72B /* PhotoCVCell.xib */; };
+		FA9C64ED2AE1654F00C1E72B /* PhotoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */; };
 		FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DD2AD5B3300051F205 /* AppDelegate.swift */; };
 		FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */; };
 		FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA409E32AD5B3300051F205 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		FA6BDCE72AE11CAD000AEED6 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		FA6BDCEA2AE154E7000AEED6 /* PhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCVC.swift; sourceTree = "<group>"; };
+		FA9C64EA2AE1654F00C1E72B /* PhotoCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVCell.xib; sourceTree = "<group>"; };
+		FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVCell.swift; sourceTree = "<group>"; };
 		FAA409DA2AD5B3300051F205 /* REST_API_Postman_Alamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REST_API_Postman_Alamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA409DD2AD5B3300051F205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA409DF2AD5B3300051F205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				FA6BDCEA2AE154E7000AEED6 /* PhotosCVC.swift */,
+				FA9C64EA2AE1654F00C1E72B /* PhotoCVCell.xib */,
+				FA9C64EB2AE1654F00C1E72B /* PhotoCVCell.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				FAA40A0E2AD85A4F0051F205 /* PostFlow.storyboard in Resources */,
 				FAA409EA2AD5B3350051F205 /* LaunchScreen.storyboard in Resources */,
 				FAA409E72AD5B3350051F205 /* Assets.xcassets in Resources */,
+				FA9C64EC2AE1654F00C1E72B /* PhotoCVCell.xib in Resources */,
 				FAA409E52AD5B3300051F205 /* Main.storyboard in Resources */,
 				FAA40A102AD85A780051F205 /* AlbumsAndPhotos.storyboard in Resources */,
 			);
@@ -338,6 +345,7 @@
 				FAA409DE2AD5B3300051F205 /* AppDelegate.swift in Sources */,
 				FAA409E02AD5B3300051F205 /* SceneDelegate.swift in Sources */,
 				FAA40A0C2AD857350051F205 /* DetailUserVC.swift in Sources */,
+				FA9C64ED2AE1654F00C1E72B /* PhotoCVCell.swift in Sources */,
 				FAA40A032AD7B9E00051F205 /* UsersModel.swift in Sources */,
 				FA6BDCEB2AE154E7000AEED6 /* PhotosCVC.swift in Sources */,
 			);

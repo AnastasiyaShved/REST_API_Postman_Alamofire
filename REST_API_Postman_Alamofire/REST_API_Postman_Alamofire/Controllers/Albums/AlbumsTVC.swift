@@ -31,7 +31,6 @@ class AlbumsTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
@@ -57,8 +56,7 @@ class AlbumsTVC: UITableViewController {
             }
         }
     }
-}
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhotos",
@@ -67,4 +65,5 @@ class AlbumsTVC: UITableViewController {
             vc.album = album
         }
     }
+}
     
