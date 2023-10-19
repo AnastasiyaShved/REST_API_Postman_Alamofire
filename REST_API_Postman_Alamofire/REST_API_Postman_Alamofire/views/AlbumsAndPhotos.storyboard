@@ -28,7 +28,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XIE-of-lXg">
                                             <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -41,17 +41,20 @@
                             <outlet property="delegate" destination="EVx-KY-CKq" id="tjE-Nw-cW4"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Kf3-GO-lrF" kind="show" identifier="showPhotos" id="mK4-nX-kuL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcz-2c-ufu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-158" y="70"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--PhotosCVC-->
         <scene sceneID="DkN-ac-4e6">
             <objects>
-                <collectionViewController id="Kf3-GO-lrF" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotosCVC" id="Kf3-GO-lrF" customClass="PhotosCVC" customModule="REST_API_Postman_Alamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="K2Q-Oj-lLF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LSo-sg-KEl">
@@ -75,6 +78,7 @@
                             <outlet property="delegate" destination="Kf3-GO-lrF" id="8mn-qj-AhL"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="W4H-gA-ezq"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRt-4Q-yTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
