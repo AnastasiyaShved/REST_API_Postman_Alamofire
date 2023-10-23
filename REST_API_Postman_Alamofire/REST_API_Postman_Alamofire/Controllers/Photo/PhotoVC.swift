@@ -8,8 +8,8 @@
 import UIKit
 
 class PhotoVC: UIViewController {
-    var photo: Photo?
     
+    var photo: Photo?
     
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView()
@@ -23,7 +23,7 @@ class PhotoVC: UIViewController {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.image = .init(named: "img-default")
         return imageView
         
@@ -39,8 +39,6 @@ class PhotoVC: UIViewController {
         view.addSubview(imageView)
         imageView.addSubview(activityIndicatorView)
         setupLayoutAnhors()
-    
-        
     }
     
     private func getPhoto() {

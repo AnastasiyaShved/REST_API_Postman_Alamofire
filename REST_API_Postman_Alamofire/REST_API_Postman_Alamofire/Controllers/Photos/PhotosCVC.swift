@@ -11,11 +11,15 @@ class PhotosCVC: UICollectionViewController {
     
     var album: Album?
     var photos: [Photo]?
+   
+    private var imageMenu = UIMenu()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "PhotoCVCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         fetchPhotos()
+        setupImageMenu()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +28,13 @@ class PhotosCVC: UICollectionViewController {
         let size = UIScreen.main.bounds.width/2 - 5
         layout.itemSize = CGSize(width: size, height: size)
         collectionView.collectionViewLayout = layout
+    }
+    
+    ///отображение контекстного меню
+    override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
+            self.imageMenu
+        }
     }
     
     // MARK: - UICollectionViewDataSource
@@ -49,15 +60,23 @@ class PhotosCVC: UICollectionViewController {
             }
         }
     }
+    /// определяем наполнение контекстного меню
+    private func setupImageMenu() {
+        let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in }
+        imageMenu = UIMenu(children: [delete])
+    }
     
+    // MARK: - Mavigations
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photo = photos?[indexPath.row]
         let vc = PhotoVC()
         vc.photo = photo
         self.present(vc, animated: true)
     }
-   
 }
+
+
+
 
     
  

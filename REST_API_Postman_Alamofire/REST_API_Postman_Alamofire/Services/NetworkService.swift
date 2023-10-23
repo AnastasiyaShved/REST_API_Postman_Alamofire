@@ -130,7 +130,6 @@ class NetworkService {
     
     static func downloadImage(from url: URL, callback: @escaping (_ imale: UIImage?, _ error: Error?) -> ()) {
         getData(from: url) { data, response, error in
-            //тут можно добавть допю логику обработки ошибок, преобразование картинок и тд
             if let data = data,
                let image = UIImage(data: data) {
                 callback(image, nil)
