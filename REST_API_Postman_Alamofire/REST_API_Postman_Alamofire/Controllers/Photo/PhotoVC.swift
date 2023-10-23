@@ -10,12 +10,10 @@ import UIKit
 class PhotoVC: UIViewController {
     var photo: Photo?
     
-    // lazy отложеная инициализация
+    
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView()
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        // попробовать сделать через  extation UIView
-        //переопеределить сам  init
         activityIndicatorView.style = .large
         activityIndicatorView.hidesWhenStopped = true
         activityIndicatorView.startAnimating()
@@ -25,27 +23,23 @@ class PhotoVC: UIViewController {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        // попробовать сделать через  extation UIView
-        //переопеределить сам  init
         imageView.contentMode = .scaleAspectFill
-        imageView.image = #imageLiteral(resourceName: "Unknown.jpeg")
+        imageView.image = .init(named: "img-default")
         return imageView
         
     }()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getPhoto()
         setupUI()
     }
     
     private func setupUI() {
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .lightGray
         view.addSubview(imageView)
         imageView.addSubview(activityIndicatorView)
-        set()
-        getPhoto()
+        setupLayoutAnhors()
+    
         
     }
     
@@ -55,14 +49,13 @@ class PhotoVC: UIViewController {
               let url = URL(string: imagePath) else { return }
         NetworkService.downloadImage(from: url) { [ weak self] image, error in
             DispatchQueue.main.async {
-                self?.imageView.image
+                self?.imageView.image = image
                 self?.activityIndicatorView.stopAnimating()
             }
         }
-              //если ошибка создавать аллер сонтраллер
     }
     
-    private func set() {
+    private func setupLayoutAnhors() {
         let margins = view.layoutMarginsGuide
         imageView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
@@ -73,10 +66,4 @@ class PhotoVC: UIViewController {
         activityIndicatorView.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive=true
         
     }
-    
-//    private func set2() {
-//        NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: CGFloat, constant: <#T##CGFloat#>)
-//    }
-    
-
 }

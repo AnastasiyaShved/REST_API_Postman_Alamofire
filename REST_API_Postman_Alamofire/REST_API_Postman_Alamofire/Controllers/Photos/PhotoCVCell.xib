@@ -20,13 +20,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="145" height="149"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-Yh-abY">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-Yh-abY">
                         <rect key="frame" x="54" y="56" width="37" height="37"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="7tp-Yh-abY" firstAttribute="centerX" secondItem="aA5-o3-QW3" secondAttribute="centerX" id="Dsl-5G-14d"/>
+                <constraint firstItem="7tp-Yh-abY" firstAttribute="centerY" secondItem="aA5-o3-QW3" secondAttribute="centerY" id="nYp-9S-lAe"/>
+            </constraints>
             <size key="customSize" width="145" height="149"/>
             <connections>
                 <outlet property="activityIndicatorView" destination="7tp-Yh-abY" id="1Wi-EW-daF"/>

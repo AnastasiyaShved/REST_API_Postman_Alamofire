@@ -164,12 +164,12 @@
 		FAA409F52AD6D4D40051F205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA9D18EE2AE19E68009C1E92 /* Photo */,
 				FAA409FE2AD7B94D0051F205 /* UsersList */,
 				FAA40A132AD85E4D0051F205 /* Posts */,
 				FAA409FB2AD6F98F0051F205 /* ImageView */,
 				FAA40A162AD85E8C0051F205 /* Albums */,
 				FA6BDCE92AE1547E000AEED6 /* Photos */,
+				FA9D18EE2AE19E68009C1E92 /* Photo */,
 				FAA409FA2AD6F95B0051F205 /* ActionsCollection */,
 			);
 			path = Controllers;

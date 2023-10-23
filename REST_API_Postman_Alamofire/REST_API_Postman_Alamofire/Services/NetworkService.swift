@@ -110,12 +110,10 @@ class NetworkService {
         if let image = CachManager.shared.imageCache.image(withIdentifier: thumbnailUrl) {
             callback(image, nil)
         } else {
-        //ecли не получилось оставть изкэга картинку
-        
             AF.request(thumbnailUrl).responseImage { response in
                 switch response.result {
                 case .success(let image): callback(image, nil)
-                    //нужно добавить в кэщ картинку
+                    //нужно добавить в кэш картинку
                     CachManager.shared.imageCache.add(image, withIdentifier: thumbnailUrl)
                     callback(image, nil)
                 case .failure(let error):
@@ -126,16 +124,14 @@ class NetworkService {
     }
     
     //универсальные методы для загрузки любых типов данных
-    
     static func getData(from url: URL, complition: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: complition).resume()
     }
     
-    static func downloadImage(from url: URL, callback: @escaping (_ _imale: UIImage?, _ _error: Error?) -> ()) {
+    static func downloadImage(from url: URL, callback: @escaping (_ imale: UIImage?, _ error: Error?) -> ()) {
         getData(from: url) { data, response, error in
-            //тут можно добавть допю логику обработки ошибок, предобразование картинок и тд
+            //тут можно добавть допю логику обработки ошибок, преобразование картинок и тд
             if let data = data,
-               // можно писать просо if let data
                let image = UIImage(data: data) {
                 callback(image, nil)
             } else {

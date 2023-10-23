@@ -12,6 +12,7 @@ import AlamofireImage
 final class CachManager {
     
     private init() {}
+    
     static let shared = CachManager()
     
     let imageCache = AutoPurgingImageCache(
