@@ -12,13 +12,10 @@ class PhotosCVC: UICollectionViewController {
     var album: Album?
     var photos: [Photo]?
    
-    private var imageMenu = UIMenu()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "PhotoCVCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         fetchPhotos()
-        setupImageMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,9 +29,29 @@ class PhotosCVC: UICollectionViewController {
     ///отображение контекстного меню
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
-            self.imageMenu
+            let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] _ in
+                //удаляем локально
+                self?.photos?.remove(at: indexPath.row)
+                // удаляем по на сервере
+//                guard let photoId = self?.photos?[indexPath.row].id else { return }
+//                NetworkService.deletePost(postId: photoId) { [weak self]  in
+//                    self?.photos?.remove(at: indexPath.row)
+//                }
+                //переопределяем колекцию с новыми данными
+                self?.collectionView.reloadData()
+            }
+            
+            let imageMenu = UIMenu(children: [delete])
+            
+            return imageMenu
         }
     }
+    
+//    NetworkService.deletePost(postId: userId) { [weak self] in
+//        self?.users.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//    }
+    
     
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,11 +77,6 @@ class PhotosCVC: UICollectionViewController {
             }
         }
     }
-    /// определяем наполнение контекстного меню
-    private func setupImageMenu() {
-        let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in }
-        imageMenu = UIMenu(children: [delete])
-    }
     
     // MARK: - Navigation
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -74,12 +86,3 @@ class PhotosCVC: UICollectionViewController {
         self.present(vc, animated: true)
     }
 }
-
-
-
-
-    
- 
-
-
-
