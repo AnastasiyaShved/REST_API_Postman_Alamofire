@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftUI
 class PhotosCVC: UICollectionViewController {
     
     var album: Album?
@@ -19,7 +19,6 @@ class PhotosCVC: UICollectionViewController {
         collectionView.register(UINib(nibName: "PhotoCVCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         fetchPhotos()
         setupImageMenu()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +47,7 @@ class PhotosCVC: UICollectionViewController {
         cell.thumbnailURL = photo?.thumbnailUrl
         return cell
     }
+        
     // MARK: - Private func
     private func fetchPhotos() {
         guard let album = album else { return }
@@ -66,7 +66,7 @@ class PhotosCVC: UICollectionViewController {
         imageMenu = UIMenu(children: [delete])
     }
     
-    // MARK: - Mavigations
+    // MARK: - Navigation
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photo = photos?[indexPath.row]
         let vc = PhotoVC()
