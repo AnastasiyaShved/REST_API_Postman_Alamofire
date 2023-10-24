@@ -32,11 +32,13 @@ class PhotosCVC: UICollectionViewController {
             let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] _ in
                 //удаляем локально
                 self?.photos?.remove(at: indexPath.row)
-                // удаляем по на сервере
-//                guard let photoId = self?.photos?[indexPath.row].id else { return }
-//                NetworkService.deletePost(postId: photoId) { [weak self]  in
-//                    self?.photos?.remove(at: indexPath.row)
-//                }
+//                удаляем; по на сервере
+                guard let photoId = self?.photos?[indexPath.row].id else { return }
+                NetworkService.deletePhotos(photosId: photoId) { [weak self] in
+                    self?.photos?.remove(at: indexPath.row)
+                    collectionView.deleteItems(at: [indexPath])
+                }
+                
                 //переопределяем колекцию с новыми данными
                 self?.collectionView.reloadData()
             }

@@ -20,7 +20,20 @@ class NetworkService {
             .response { response in
                 callback()
             }
+        
     }
+    
+    static func deletePhotos(photosId: Int,
+                           callback: @escaping() -> ()) {
+        let urlPath = "\(ApiConstans.photosPath)/\(photosId)"
+        AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
+            .response { response in
+                callback()
+            }
+        
+    }
+    
+    
     
     static func fetchComments(postID: Int,
                               callback: @escaping (_ result: [Comment]?, _ error: Error?) -> ()) {
