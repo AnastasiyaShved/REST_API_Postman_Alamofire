@@ -18,8 +18,6 @@ class CommentsTVC: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commetns.count
     }
@@ -47,6 +45,7 @@ class CommentsTVC: UITableViewController {
         }
     }
     
+    // MARK: - private func
     private func fetchComments() {
         guard let postId = postID else { return }
         NetworkService.fetchComments(postID: postId) { [weak self] commetns, error in
